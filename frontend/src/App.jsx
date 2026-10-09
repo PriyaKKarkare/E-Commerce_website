@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import axios from "axios";
 import Products from './pages/Products';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ProductDetails from './pages/ProductDetails';
 
 function App() {
 
@@ -11,8 +12,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Products />} />
         <Route path="/products/:id" element={<ProductDetails />} />
-
-        <Products />
       </Routes>
     </BrowserRouter>
   );
